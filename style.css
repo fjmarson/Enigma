@@ -1,121 +1,114 @@
-head{
-    width: 940px;
-    position: relative;
-    margin: 0 auto;
-}
 
 body{
-    margin: 0;
-    padding: 0;
-    background-color:ghostwhite;
+    background-color:dimgray;
     font-family: 'Montserrat', sans-serif;
 }
 
-.container {
-    display: flex;
+.contenedor {
+    width: 1024px;
+    height: 625px;
     margin: 20px auto;
     padding: 20px 25px;
-    background-color:white ;
-    -webkit-box-shadow: 0px 0px 8px 5px rgba(28, 18, 54, 0.33);
+    background-color:ghostwhite ;
     box-shadow: 0px 0px 8px 5px rgba(28, 18, 54, 0.33);
-    min-height: 580px;
-    width: 80%;
     border-radius: 20px;
     border: 12px;
   }
+
 .logo{
     width: 200px;
-    position: absolute;
-    top: 40px;
-    left: 150px;
+    position: relative;
+    top: 10px;
+    left: 20px;
 }
 
 .texto{
     display: flex;
     resize: none;
-    width: 577px;
+    width: 560px;
     height: 300px;
-    margin: 130px 0 0 80px;
+    margin: 60px 0 0px 40px;
     padding: 10px;
     font-size: 24px;
     text-align: center;
     border: none;
     outline: none;
     border-radius: 22px;
-    border: 12px;
-    overflow: hidden;
+    overflow: auto;
+    overflow-wrap: break-word ;
     box-shadow: 0 0 25px -8px rgba(0, 0, 0, 0.185);
 }
 
 .aclaración{
+    display: flex;
+    position: relative;
+    margin: 20px auto 0 220px;
     opacity: 80%;
     font-size: 12px;
-    margin: 460px 0 0 -400px;
 }
-/*.aclaración::before{
-    content:"";
-}*/
-   
+
+.aclaración::before{
+    content:"❕ ";
+}
+
+
 .botones{
-    display: flex;
-    width: 677px;
-    height: 67px;
-    margin: 500px 0 0 -440px;
-    gap: 24px;
+    position: relative;
+    margin: 40px auto 0 30px;
 }
 
 button{
-    width: 328px;
-    height: 67px;
-    padding: 24px;
+    width: 277px;
+    height: 60px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 600;
     background-color: ghostwhite;
     border-radius: 24px;
-    gap: 8px;
 }
 
 button:hover{
     background-color:lightsteelblue;
     transform: scale(1.1);
-    transition: 0.5s;
-}
-
-.resultado {
-    display: block;
-    resize: none;
-    width: 380px;
-    height: 560px;
-    margin: 0px 0 0 40px;
-    padding: 10px;
-    font-size: 24px;
-    border: none; 
-    outline: none;
-    border-radius: 22px;
-    overflow: hidden;
-    box-shadow: 0 0 25px -8px rgba(0, 0, 0, 0.185);
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center; 
-    backdrop-filter: blur(5px);
+    transition: 300ms;
 }
 
 #copyBtn {
-    position: absolute;
-    bottom: 20px; /* Ajusta la distancia desde el borde inferior */
-    right:253px; /* Ajusta la distancia desde el borde derecho */
-    margin: 0 0 15px 0;
-    z-index: 2; /* Asegura que el botón aparezca sobre la imagen */
+    position: relative;
+    bottom: 20px;
+    top: -70px; 
+    left: 675px;
+    z-index: 2; 
 }
 
-footer {
-    color:  #333;
-    padding: 20px;
+.resultado {
+    display: flex;
+    resize: none;
+    width: 300px;
+    height: 560px;
+    margin: -700px 0 0 663px;
+    padding: 10px;
+    font-size: 24px;
     text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 22px;
+    overflow: auto;
+    overflow-wrap: break-word ;
+    box-shadow: 0 0 25px -8px rgba(0, 0, 0, 0.185);
+    background-size: 130%;
+    background-position: center; 
+    backdrop-filter: blur(5px);
+}
+   
+footer {
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    position: relative;
+    text-align: center;
+    color:white;
+    padding: 10px;
 }
 
 .footer::before{
     content:"©";
-}
+}*/

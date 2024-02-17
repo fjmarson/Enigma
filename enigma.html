@@ -11,31 +11,29 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="container">
+    <div class="contenedor">
 
-            <img class="logo" src="img/Enigma-logo.svg.png" alt="Imagen logo Enigma">
+        <img class="logo" src="img/Enigma-logo.svg.png" alt="Imagen logo Enigma">
 
-            <label>
-                <textarea id="texto" class="texto" rows="4" placeholder="Ingrese el texto aquí"></textarea>
-            </label>
+        <label>
+            <textarea id="texto" class="texto" rows="4" placeholder="Ingrese el texto aquí"></textarea>
+        </label>
 
-            <p class="aclaración">Solo letras minúsculas y sin acentos</p>
+        <p class="aclaración">Solo letras minúsculas y sin acentos</p>
 
-            <!-- Botones de Encriptar y Desencriptar -->
-            <div class="botones">
-                <button class="button-small" onclick="procesar('encriptar')">Encriptar</button>
-                <button onclick="procesar('desencriptar')">Desencriptar</button>
-            </div>
-
-            <label>
-                <textarea id="resultado" class="resultado" rows="4" readonly></textarea>
-            </label>
-
-            <div>
-                <button id="copyBtn" onclick="copiarResultado()">Copiar</button>
-            </div>
+        <div class="botones">
+            <button class="button-small" onclick="procesar('encriptar')">Encriptar</button>
+            <button onclick="procesar('desencriptar')">Desencriptar</button>
         </div>
+
+        <div>
+            <button id="copyBtn" onclick="copiarResultado()">Copiar</button>
+        </div>
+
+        <label>
+            <textarea id="resultado" class="resultado" rows="4" readonly></textarea>
+        </label>
+
     </div>
 
     <footer class="footer">
