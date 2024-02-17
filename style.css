@@ -73,7 +73,7 @@ button:hover{
     transition: 300ms;
 }
 
-#copyBtn {
+#copiarBoton {
     position: relative;
     bottom: 20px;
     top: -70px; 
@@ -111,4 +111,4 @@ footer {
 
 .footer::before{
     content:"©";
-}*/
+}

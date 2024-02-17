@@ -1,29 +1,12 @@
-function verificarTexto() {
-    var resultado = document.getElementById('resultado');
-
-    if (resultado.value.trim() !== '') {
-        // Si hay texto en el área de texto, eliminamos la imagen de fondo
-        resultado.style.backgroundImage = 'none';
-    } else {
-        // Si no hay texto en el área de texto, mostramos la imagen de fondo
-        resultado.style.backgroundImage = 'url("img/turin.jpg")';
-    }
-}
-
-  // Agregamos el evento onblur al textarea
-  document.getElementById('resultado').addEventListener('blur', verificarTexto);
-  
-
-  function procesar(accion) {
+function procesar(accion) {
     var textoElement = document.getElementById('texto');
     var resultado = document.getElementById('resultado');
-
+    var texto = textoElement.value.toLowerCase();
+    
     // Verificamos si estamos encriptando
     if (accion === 'encriptar') {
-        var texto = textoElement.value.toLowerCase();
         resultado.value = encriptar(texto);
     } else if (accion === 'desencriptar') {
-        var texto = textoElement.value.toLowerCase();
         resultado.value = desencriptar(texto);
     }
 
@@ -50,10 +33,26 @@ function desencriptar(texto) {
         .replace(/enter/g, 'e');
 }
 
+function verificarTexto() {
+    var resultado = document.getElementById('resultado');
+
+    if (resultado.value.trim() !== '') {
+        // Si hay texto en el área de texto, eliminamos la imagen de fondo
+        resultado.style.backgroundImage = 'none';
+    } else {
+        // Si no hay texto en el área de texto, mostramos la imagen de fondo
+        resultado.style.backgroundImage = 'url("img/turin.jpg")';
+    }
+}
+
+// Agregamos el evento onblur al textarea
+document.getElementById('resultado').addEventListener('blur', verificarTexto);
+
 function copiarResultado() {
     var resultado = document.getElementById('resultado');
     resultado.select();
     navigator.clipboard.writeText(resultado.value);
     alert('Texto copiado al portapapeles');
 }
+
 
