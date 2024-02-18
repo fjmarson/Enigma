@@ -3,23 +3,23 @@ function procesar(accion) {
     var resultado = document.getElementById('resultado');
     var texto = textoElement.value;
 
-    // Verificamos si hay caracteres no permitidos
+    // Verifica si hay caracteres no permitidos
     if (tieneCaracteresNoPermitidos(texto)) {
         alert("Por favor, ingrese solo letras minúsculas y sin acentos.");
         return; // Salimos de la función
     }
 
-    // Verificamos si estamos encriptando
+    // Verifica si estamos encriptando
     if (accion === 'encriptar') {
         resultado.value = encriptar(texto);
     } else if (accion === 'desencriptar') {
         resultado.value = desencriptar(texto);
     }
 
-    // Limpiamos solo el textarea 'texto'
+    // Limpia solo el textarea 'texto'
     textoElement.value = '';
 
-    // Verificamos el texto restante en 'resultado'
+    // Verifica el texto restante en 'resultado'
     verificarTexto();
 }
 
@@ -48,15 +48,15 @@ function verificarTexto() {
     var resultado = document.getElementById('resultado');
 
     if (resultado.value.trim() !== '') {
-        // Si hay texto en el área de texto, eliminamos la imagen de fondo
+        // Si hay texto en el área de texto, elimina la imagen de fondo
         resultado.style.backgroundImage = 'none';
     } else {
-        // Si no hay texto en el área de texto, mostramos la imagen de fondo
+        // Si no hay texto en el área de texto, muestra la imagen de fondo
         resultado.style.backgroundImage = 'url("img/turin.jpg")';
     }
 }
 
-// Agregamos el evento onblur al textarea
+// Agrega el evento onblur al textarea
 document.getElementById('resultado').addEventListener('blur', verificarTexto);
 
 function copiarResultado() {
@@ -66,7 +66,7 @@ function copiarResultado() {
     alert('Texto copiado al portapapeles');
 }
 
-// Llamamos a verificarTexto() cuando la página se carga
+// Llama a verificarTexto() cuando la página se carga
 window.onload = function() {
     verificarTexto();
 }
