@@ -1,8 +1,14 @@
 function procesar(accion) {
     var textoElement = document.getElementById('texto');
     var resultado = document.getElementById('resultado');
-    var texto = textoElement.value.toLowerCase();
-    
+    var texto = textoElement.value;
+
+    // Verificamos si hay caracteres no permitidos
+    if (tieneCaracteresNoPermitidos(texto)) {
+        alert("Por favor, ingrese solo letras minúsculas y sin acentos.");
+        return; // Salimos de la función
+    }
+
     // Verificamos si estamos encriptando
     if (accion === 'encriptar') {
         resultado.value = encriptar(texto);
@@ -15,6 +21,11 @@ function procesar(accion) {
 
     // Verificamos el texto restante en 'resultado'
     verificarTexto();
+}
+
+// Función para verificar si hay caracteres no permitidos en el texto
+function tieneCaracteresNoPermitidos(texto) {
+    return /[^a-z ]/.test(texto);
 }
 
 function encriptar(texto) {
@@ -58,6 +69,4 @@ function copiarResultado() {
 // Llamamos a verificarTexto() cuando la página se carga
 window.onload = function() {
     verificarTexto();
-};
-
-
+}
