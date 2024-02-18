@@ -100,7 +100,7 @@ button:hover{
     backdrop-filter: blur(5px);
 }
    
-footer {
+.footer {
     width: 100%;
     position: relative;
     text-align: center;
@@ -108,6 +108,12 @@ footer {
     padding: 10px;
 }
 
-.footer::before{
+.footer p::before{
     content:"©";
 }
+
+.footer img {
+    width: 30px; 
+    margin: 15px 5px; 
+}
+
