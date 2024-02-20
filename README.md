@@ -43,11 +43,9 @@ gaitober" => "gato"
 
 ---
 
-### Vista previa:  
-  
-![Encriptador](https://github.com/fjmarson/Enigma/tree/Enigma/img/Screenshot.png)
+### Vista previa:
 
-
+![Encriptador](https://raw.githubusercontent.com/fjmarson/Enigma/Enigma/img/Screenshot.png)
 
 ---
 
