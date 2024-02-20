@@ -12,12 +12,16 @@ function procesar(accion) {
     // Verifica si estamos encriptando
     if (accion === 'encriptar') {
         resultado.value = encriptar(texto);
-    } else if (accion === 'desencriptar') {
-        resultado.value = desencriptar(texto);
+    } else {
+        if (accion === 'desencriptar') {
+            resultado.value = desencriptar(texto);
+        }
     }
 
     // Limpia solo el textarea 'texto'
-    textoElement.value = '';
+    if (textoElement) {
+        textoElement.value = '';
+    }
 
     // Verifica el texto restante en 'resultado'
     verificarTexto();
@@ -25,23 +29,29 @@ function procesar(accion) {
 
 // Función para verificar si hay caracteres no permitidos en el texto
 function tieneCaracteresNoPermitidos(texto) {
-    return /[^a-z ]/.test(texto);
+    if (/[^a-z ]/.test(texto)) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 function encriptar(texto) {
-    return texto.replace(/e/g, 'enter')
+    var textoEncriptado = texto.replace(/e/g, 'enter')
         .replace(/i/g, 'imes')
         .replace(/a/g, 'ai')
         .replace(/o/g, 'ober')
         .replace(/u/g, 'ufat');
+    return textoEncriptado;
 }
 
 function desencriptar(texto) {
-    return texto.replace(/ufat/g, 'u')
+    var textoDesencriptado = texto.replace(/ufat/g, 'u')
         .replace(/ober/g, 'o')
         .replace(/ai/g, 'a')
         .replace(/imes/g, 'i')
         .replace(/enter/g, 'e');
+    return textoDesencriptado;
 }
 
 function verificarTexto() {
@@ -57,13 +67,17 @@ function verificarTexto() {
 }
 
 // Agrega el evento onblur al textarea
-document.getElementById('resultado').addEventListener('blur', verificarTexto);
+if (document.getElementById('resultado')) {
+    document.getElementById('resultado').addEventListener('blur', verificarTexto);
+}
 
 function copiarResultado() {
     var resultado = document.getElementById('resultado');
-    resultado.select();
-    navigator.clipboard.writeText(resultado.value);
-    alert('Texto copiado al portapapeles');
+    if (resultado) {
+        resultado.select();
+        navigator.clipboard.writeText(resultado.value);
+        alert('Texto copiado al portapapeles');
+    }
 }
 
 // Llama a verificarTexto() cuando la página se carga
