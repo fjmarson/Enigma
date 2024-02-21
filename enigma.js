@@ -82,5 +82,5 @@ function copiarResultado() {
 
 // Llama a verificarTexto() cuando la página se carga
 window.onload = function() {
-    verificarTexto();
+    verificarTexto(); 
 }
