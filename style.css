@@ -62,12 +62,12 @@ button{
     margin: 10px;
     font-size: 18px;
     font-weight: 300;
-    background-color: ghostwhite;
+    background-color:lightgray;
     border-radius: 24px;
 }
 
 button:hover{
-    background-color:lightsteelblue;
+    background-color:lightslategray;
     transform: scale(1.1);
     transition: 300ms;
 }
