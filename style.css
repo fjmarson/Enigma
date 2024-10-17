@@ -1,0 +1,121 @@
+body{
+    background-color:dimgray;
+    font-family: "Victor Mono", monospace;
+}
+
+.contenedor {
+    width: 1024px;
+    height: 625px;
+    margin: 20px auto;
+    padding: 20px 25px;
+    background-color:ghostwhite ;
+    box-shadow: 0px 0px 8px 5px rgba(28, 18, 54, 0.33);
+    border-radius: 20px;
+    border: 12px;
+  }
+
+.logo{
+    width: 200px;
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+.texto{
+    display: flex;
+    position: relative;
+    resize: none;
+    width: 560px;
+    height: 300px;
+    margin: 60px 0 0px 40px;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 22px;
+    overflow: auto;
+    overflow-wrap: break-word ;
+    box-shadow: 0 0 25px -8px rgba(0, 0, 0, 0.185);
+}
+
+.aclaración{
+    display: flex;
+    position: relative;
+    margin: 20px auto 0 220px;
+    opacity: 80%;
+    font-size: 12px;
+}
+
+.aclaración::before{
+    content:"❕ ";
+}
+
+.botones{
+    position: relative;
+    margin: 40px auto 0 30px;
+}
+
+button{
+    width: 277px;
+    height: 60px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    background-color:lightgray;
+    border-radius: 24px;
+}
+
+button:hover{
+    background-color:lightslategray;
+    transform: scale(1.1);
+    transition: 300ms;
+}
+
+#copiarBoton {
+    position: relative;
+    bottom: 20px;
+    top: -70px; 
+    left: 675px;
+    z-index: 2; 
+}
+
+.resultado {
+    display: flex;
+    position: relative;
+    resize: none;
+    width: 300px;
+    height: 560px;
+    margin: -700px 0 0 663px;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 22px;
+    overflow: auto;
+    overflow-wrap: break-word ;
+    box-shadow: 0 0 25px -8px rgba(0, 0, 0, 0.185);
+    background-size: 130%;
+    background-position: center; 
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+}
+   
+.footer {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color:white;
+    padding: 10px;
+}
+
+.footer p::before{
+    content:"©";
+}
+
+.footer img {
+    width: 30px; 
+    margin: 15px 5px; 
+}
+

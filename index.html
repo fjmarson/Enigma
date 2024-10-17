@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css/reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+    <title>ENIGMA</title>
+</head>
+
+<body>
+    <div class="contenedor">
+
+        <img class="logo" src="img/Enigma-logo.png" alt="Imagen logo Enigma">
+
+        <label>
+            <textarea id="texto" class="texto" rows="4" placeholder="Ingrese el texto aquí"></textarea>
+        </label>
+
+        <p class="aclaración">Utilizalo con responsabilidad</p>
+
+        <div class="botones">
+            <button class="button-small" onclick="procesar('encriptar')">Encriptar</button>
+            <button onclick="procesar('desencriptar')">Desencriptar</button>
+        </div>
+
+        <div>
+            <button id="copiarBoton" onclick="copiarResultado()">Copiar</button>
+        </div>
+
+        <label>
+            <textarea id="resultado" class="resultado" rows="4" readonly></textarea>
+        </label>
+
+    </div>
+
+    <footer class="footer">
+        <p>2024 | Coded by Marson</p>
+        <a href="https://github.com/fjmarson" target="_blank"><img src="img/GitHubLogo.png" alt="GitHub"></a>
+        <a href="https://discord.gg/jbB29eP3Mz" target="_blank"><img src="img/DiscordLogo.png" alt="Discord"></a>
+        <a href="https://www.linkedin.com/in/fernando-marson-dev/" target="_blank"><img src="img/LinkedinLogo.png" alt="LinkedIn"></a>
+    </footer>
+
+    <script src="enigma.js"></script>
+</body>
+
+</html>
+
+
+
