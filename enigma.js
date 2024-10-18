@@ -26,20 +26,48 @@ function tieneCaracteresNoPermitidos(texto) {
 }
 
 function encriptar(texto) {
-    var textoEncriptado = texto.replace(/e/g, 'enter')
+    // Guarda la capitalización original
+    const mayusculas = texto.split('').map((letra, index) => {
+        return letra === letra.toUpperCase() ? index : -1;
+    }).filter(index => index !== -1);
+
+    // Convierte el texto a minúsculas para encriptar
+    var textoEncriptado = texto.toLowerCase().replace(/e/g, 'enter')
         .replace(/i/g, 'imes')
         .replace(/a/g, 'ai')
         .replace(/o/g, 'ober')
         .replace(/u/g, 'ufat');
+
+    // Restaura la capitalización original
+    mayusculas.forEach(index => {
+        textoEncriptado = textoEncriptado.slice(0, index) +
+            textoEncriptado[index].toUpperCase() +
+            textoEncriptado.slice(index + 1);
+    });
+
     return textoEncriptado;
 }
 
 function desencriptar(texto) {
-    var textoDesencriptado = texto.replace(/ufat/g, 'u')
+    // Guarda la capitalización original
+    const mayusculas = texto.split('').map((letra, index) => {
+        return letra === letra.toUpperCase() ? index : -1;
+    }).filter(index => index !== -1);
+
+    // Convierte el texto a minúsculas para desencriptar
+    var textoDesencriptado = texto.toLowerCase().replace(/ufat/g, 'u')
         .replace(/ober/g, 'o')
         .replace(/ai/g, 'a')
         .replace(/imes/g, 'i')
         .replace(/enter/g, 'e');
+
+    // Restaura la capitalización original
+    mayusculas.forEach(index => {
+        textoDesencriptado = textoDesencriptado.slice(0, index) +
+            textoDesencriptado[index].toUpperCase() +
+            textoDesencriptado.slice(index + 1);
+    });
+
     return textoDesencriptado;
 }
 
